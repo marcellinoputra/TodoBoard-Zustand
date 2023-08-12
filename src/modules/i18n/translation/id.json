@@ -1,0 +1,15 @@
+{
+    "App.Header": {
+        "Title": "Todo List"
+    },
+    "App.Header.Language": {
+        "English": "English",
+        "Indonesia": "Indonesia",
+        "Japan": "Japan"
+    },
+    "App.Progress": {
+        "Planned": "Planned",
+        "OnProgress": "On Progress",
+        "Done": "Done"
+    }
+}
