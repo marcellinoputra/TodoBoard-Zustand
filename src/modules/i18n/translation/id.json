@@ -1,15 +1,18 @@
 {
-    "App.Header": {
-        "Title": "Todo List"
-    },
-    "App.Header.Language": {
-        "English": "English",
-        "Indonesia": "Indonesia",
-        "Japan": "Japan"
-    },
-    "App.Progress": {
-        "Planned": "Planned",
-        "OnProgress": "On Progress",
-        "Done": "Done"
+    "id": {
+            "app_header": {
+                "Title": "Todo List"
+            },
+            "app_header_language": {
+                "English": "English",
+                "Indonesia": "Indonesia",
+                "Japan": "Jepang"
+            },
+            "app_progress": {
+                "PLANNED": "Di Rencanakan",
+                "ONGOING": "Sedang Dalam Proses",
+                "Done": "Selesai"
+            }
+        
     }
 }

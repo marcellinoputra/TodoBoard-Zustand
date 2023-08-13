@@ -1,15 +1,17 @@
 {
-    "App.Header": {
-        "Title": "Todo List"
-    },
-    "App.Header.Language": {
-        "English": "英語",
-        "Indonesia": "インドネシア",
-        "Japan": "ジャップ"
-    },
-    "App.Progress": {
-        "Planned": "予定",
-        "OnProgress": "進歩について",
-        "Done": "完了"
+    "jp": {
+        "app_header": {
+            "Title": "Todo List"
+        },
+        "app_header_language": {
+            "English": "英語",
+            "Indonesia": "インドネシア",
+            "Japan": "ジャップ"
+        },
+        "app_progress": {
+            "Planned": "予定",
+            "OnProgress": "進歩について",
+            "Done": "完了"
+        }
     }
 }

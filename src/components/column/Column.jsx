@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useStore } from '../../store';
 import Task from '../task/Task';
 import './Column.css';
@@ -11,6 +11,8 @@ import {
   Typography,
 } from '@mui/material';
 import classNames from 'classnames';
+import { ThemeContext } from '@emotion/react';
+import { Context } from '../context/context';
 
 const boxStyle = {
   position: 'absolute',
@@ -52,6 +54,24 @@ export default function Column({ progress }) {
   function handleOpen() {
     setOpen(true);
   }
+
+  // const Content = () => {
+  //   const theme = useContext(ThemeContext);
+  //   return (
+  //     <div
+  //       style={{
+  //         background: theme === 'dark' ? 'black' : 'papayawhip',
+  //         color: theme === 'dark' ? 'white' : 'palevioletred',
+  //         width: '100%',
+  //         minHeight: '200px',
+  //       }}
+  //     >
+  //       {'The Theme Here is' + theme}
+  //     </div>
+  //   );
+  // };
+
+  const value = useContext(Context);
 
   return (
     <div

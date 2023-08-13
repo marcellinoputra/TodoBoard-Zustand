@@ -1,5 +1,4 @@
 import i18n from '../../../modules/i18n/i18n';
-import Session from '../../../modules/session';
 import { SESSION_STORAGE_KEY as LanguageKey } from '../../../modules/language';
 import {
   Box,
@@ -10,6 +9,9 @@ import {
   Typography,
 } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
+import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import session from '../../../modules/session';
 
 const sxButton = {
   marginRight: 8,
@@ -27,33 +29,39 @@ export default function Language() {
     setAnchorE1(null);
   }
 
-  function changeLanguageToIndonesia() {
-    i18n.changeLanguage('id');
-    Session.setSession(LanguageKey, { Language: 'id' });
+  async function changeLanguageToIndonesia() {
+    session.set(LanguageKey, { Language: 'id' });
+    await i18n.changeLanguage('id');
+    console.log('');
+    closeLanguage();
   }
 
   function changeLanguageToEnglish() {
     i18n.changeLanguage('en');
-    Session.setSession(LanguageKey, { Language: 'en' });
+    session.set(LanguageKey, { Language: 'en' });
+    console.log('Di Pencet');
+    closeLanguage();
   }
 
   function changeLanguageToJapanese() {
     i18n.changeLanguage('jp');
-    Session.setSession(LanguageKey, { Language: 'jp' });
+    session.set(LanguageKey, { Language: 'jp' });
+    console.log('Di Pencet');
+    closeLanguage();
   }
 
   return (
     <Grid item>
       <Box sx={sxButton}>
         <IconButton onClick={openLanguage}>
-          <LanguageIcon sx={{ color: white }} />
+          <LanguageIcon sx={{ color: 'white' }} />
         </IconButton>
       </Box>
       <Menu
         keepMounted
         anchorEl={anchorE1}
-        open={anchorE1}
-        onClose={closeLanguage}
+        open={Boolean(anchorE1)}
+        onClose={() => closeLanguage()}
       >
         <MenuItem onClick={changeLanguageToEnglish}>
           <Typography>{t('English')}</Typography>

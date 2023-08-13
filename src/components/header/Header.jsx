@@ -1,5 +1,6 @@
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import Language from './language/language';
 
 const sxToolbar = {
   display: 'grid',
@@ -8,7 +9,7 @@ const sxToolbar = {
 };
 
 export default function HeaderView() {
-  const { t } = useTranslation('App.Header');
+  const { t } = useTranslation('app_header', 'Title');
 
   return (
     <>
